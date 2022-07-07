@@ -13,17 +13,21 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Madcamp_week2">
-        <activity android:name=".LoginActivity"></activity>
-        <activity
-            android:name=".SplashActivity"
-            android:hardwareAccelerated="false">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:hardwareAccelerated="false">
+
+        </activity>
+        <activity android:name=".MainActivity" >
+
+        </activity>
     </application>
 
 </manifest>
