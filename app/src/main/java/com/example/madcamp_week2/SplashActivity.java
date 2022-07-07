@@ -11,7 +11,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splash);
 
         Handler hd = new Handler();
         hd.postDelayed(new SplashHandler(), 1500);
@@ -20,6 +20,7 @@ public class SplashActivity extends AppCompatActivity {
     private class SplashHandler implements Runnable {
         public void run(){
             startActivity(new Intent(getApplication(), MainActivity.class));
+            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
             SplashActivity.this.finish();
         }
     }
