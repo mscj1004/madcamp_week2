@@ -102,7 +102,7 @@ public class SignupActivity extends AppCompatActivity {
                     BufferedReader reader = null;
 
                     try {
-                        URL url = new URL("http://13.125.182.78:5000/api/user"); //연결을 함
+                        URL url = new URL("http://10.0.2.2:5000/api/user"); //연결을 함
                         con = (HttpURLConnection) url.openConnection();
                         con.setRequestMethod("POST");//POST방식으로 보냄
                         con.setRequestProperty("Cache-Control", "no-cache");//캐시 설정

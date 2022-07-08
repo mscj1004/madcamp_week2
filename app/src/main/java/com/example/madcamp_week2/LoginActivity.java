@@ -72,9 +72,6 @@ public class LoginActivity extends AppCompatActivity {
                 id = (EditText) findViewById(R.id.id_edit);
                 password = (EditText) findViewById(R.id.password_edit);
 
-                //URL url = new URL("http://13.125.182.78/api/user");
-                //HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-
                 try {
                     //JSONObject를 만들고 key value 형식으로 값을 저장해준다.
                     JSONObject jsonObject = new JSONObject();
@@ -85,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
                     BufferedReader reader = null;
 
                     try {
-                        URL url = new URL("http://13.125.182.78:5000/api/user1"); //연결을 함
+                        URL url = new URL("http://10.0.2.2:5000/api/user1"); //연결을 함
                         con = (HttpURLConnection) url.openConnection();
                         con.setRequestMethod("POST");//POST방식으로 보냄
                         con.setRequestProperty("Cache-Control", "no-cache");//캐시 설정
@@ -126,7 +123,6 @@ public class LoginActivity extends AppCompatActivity {
                         String message = object.getString("message");
 
                         if(loginSuccess=="true"){
-                            System.out.println("성공");
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(intent);startActivity(intent);
                             Handler handler = new Handler(Looper.getMainLooper());
