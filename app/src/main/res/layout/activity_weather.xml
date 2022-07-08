@@ -39,7 +39,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/regular"
                 android:text="12"
-                android:textColr="#555555"
+                android:textColor="#555555"
                 android:textSize="15dp"></TextView>
 
             <TextView
