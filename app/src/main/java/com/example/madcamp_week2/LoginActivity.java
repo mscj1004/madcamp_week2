@@ -5,14 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.JsonToken;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -127,12 +126,29 @@ public class LoginActivity extends AppCompatActivity {
                         String message = object.getString("message");
 
                         if(loginSuccess=="true"){
+                            System.out.println("성공");
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                            startActivity(intent);
+                            startActivity(intent);startActivity(intent);
+                            Handler handler = new Handler(Looper.getMainLooper());
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run()
+                                {
+                                    Toast.makeText(getApplicationContext(),"환영합니다.",Toast.LENGTH_SHORT).show();
+                                }
+                            }, 0);
                         }
 
                         else if(loginSuccess=="false"){
-                            Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+                            System.out.println("실패");
+                            Handler handler = new Handler(Looper.getMainLooper());
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run()
+                                {
+                                    Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+                                }
+                            }, 0);
                         }
 
                     } catch (MalformedURLException e) {
