@@ -5,6 +5,8 @@ import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -189,13 +191,13 @@ public class SignupActivity extends AppCompatActivity {
 
 
                 try{
-                    URL url = new URL("http://10.0.2.2:5000/api/user2");
+                    URL url = new URL("http://13.125.182.78:5000/api/user2");
                     con = (HttpURLConnection) url.openConnection();
                     con.setRequestMethod("POST");
                     con.setRequestProperty("Cache-Control", "no-cache");
                     con.setRequestProperty("Content-Type", "application/json");
 
-                    con.setRequestProperty("Accept", "appplication/json");
+                    con.setRequestProperty("Accept", "application/json");
                     con.setDoOutput(true);
 
                     con.setDoInput(true);
@@ -228,13 +230,26 @@ public class SignupActivity extends AppCompatActivity {
                     String message = object.getString("message");
 
                     if(checkId == "true"){
+                        Handler handler = new Handler(Looper.getMainLooper());
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+                            }
 
-                        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
 
 
+
+                        },0);
                     }
                     else if(checkId == "false"){
-                        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+                        Handler handler = new Handler(Looper.getMainLooper());
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+                            }
+                        },0);
                     }
 
 
