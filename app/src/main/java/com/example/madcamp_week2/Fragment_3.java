@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Spinner;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +59,21 @@ public class Fragment_3 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_3, container, false);
+        Spinner topsptype = rootView.findViewById(R.id.sp_top_type);
+        Spinner topspcolor = rootView.findViewById(R.id.sp_top_color);
+        Spinner botsptype = rootView.findViewById(R.id.sp_bottom_type);
+        Spinner botspcolor = rootView.findViewById(R.id.sp_bottom_color);
+        Spinner accsptype = rootView.findViewById(R.id.sp_accessory_type);
+        Spinner accspcolor = rootView.findViewById(R.id.sp_accessory_color);
+        Spinner outsptype = rootView.findViewById(R.id.sp_top_color);
+        Spinner outspcolor = rootView.findViewById(R.id.sp_outer_color);
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_3, container, false);
+
+        String a = (String) topsptype.getSelectedItem();
+
+        return rootView;
     }
 }

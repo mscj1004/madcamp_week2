@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name = "man_top">
+        <item>없음</item>
+        <item>니트</item>
+        <item>맨투맨</item>
+        <item>셔츠</item>
+        <item>긴팔티</item>
+        <item>반팔티</item>
+        <item>후드티</item>
+    </string-array>
+</resources>

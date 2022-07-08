@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="man_acc">
+        <item>없음</item>
+        <item>모자</item>
+        <item>목도리</item>
+        <item>팔찌</item>
+        <item>목걸이</item>
+
+
+    </string-array>
+</resources>

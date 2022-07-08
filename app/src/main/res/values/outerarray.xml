@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="man_outer">
+        <item>없음</item>
+        <item>패딩</item>
+        <item>코트</item>
+        <item>재킷</item>
+        <item>블레이저</item>
+        <item>가죽재킷</item>
+    </string-array>
+</resources>
