@@ -5,10 +5,76 @@
     android:layout_height="match_parent"
     tools:context=".Fragment_2">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="hello_blank_fragment2" />
+        android:background="@drawable/weather_bg"
+        android:layout_marginBottom="60dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/medium"
+                android:textSize="28dp"
+                android:textColor="@color/bold_red"
+                android:text="서비스 사용 전 알아야 할 점"
+                >
+            </TextView>
 
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="마법옷장에서 제공하는 날씨 정의 경우, 공공데이터 API에서 받아와 사용합니다."
+                android:textSize="16dp"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/bold_red"
+                >
+            </TextView>
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="해당 서비스에서 온도 불러오기를 실패할 경우 개발자 연락처로 전달 주시길 바랍니다."
+                android:textSize="16dp"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/bold_red"
+                >
+            </TextView>
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기온의 경우, 매일 오후 3시에 업데이트되며, 기준 장소의 경우 대전광역시에 맞춰져 있습니다 ."
+                android:textSize="16dp"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/bold_red"
+                >
+            </TextView>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/button_test"
+                android:background="@color/bold_red"
+                android:text="서비스 사용하러 가기"
+                android:textColor="@color/white"
+                android:fontFamily="@font/regular"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content">
+            </androidx.appcompat.widget.AppCompatButton>
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

@@ -21,9 +21,13 @@ public class MainActivity extends AppCompatActivity {
         ViewPager viewPager = findViewById(R.id.viewpager);
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabLayout);
+
+
+
+
         tabs.setupWithViewPager(viewPager);
-        tabs.getTabAt(0).setIcon(R.drawable.weather);
-        tabs.getTabAt(1).setIcon(R.drawable.home);
+        tabs.getTabAt(0).setIcon(R.drawable.home);
+        tabs.getTabAt(1).setIcon(R.drawable.weather);
         tabs.getTabAt(2).setIcon(R.drawable.hanger);
         tabs.getTabAt(3).setIcon(R.drawable.heart);
     }
