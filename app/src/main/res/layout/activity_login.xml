@@ -60,6 +60,7 @@
     </EditText>
 
     <EditText
+        android:inputType="textPassword"
         android:id="@+id/password_edit"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -131,6 +132,7 @@
             app:layout_constraintVertical_bias="0.2"></TextView>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sign_up_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="11dp"

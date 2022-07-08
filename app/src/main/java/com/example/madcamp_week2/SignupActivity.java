@@ -3,16 +3,12 @@ package com.example.madcamp_week2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.JsonToken;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -28,65 +24,71 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class LoginActivity extends AppCompatActivity {
+public class SignupActivity extends AppCompatActivity {
 
-    Button Login;
-    Button MoveSignUp;
+    Button SignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_signup);
+        SignUp = (Button)findViewById(R.id.sign_up_button);
 
-        Login = (Button) findViewById(R.id.login_button);
-        MoveSignUp = (Button) findViewById(R.id.sign_up_button);
+        SignUp.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                       Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                       startActivity(intent);
+                       Toast.makeText(getApplicationContext(),"회원가입이 완료되었습니다.",Toast.LENGTH_SHORT).show();
 
-        Login.setOnClickListener(new View.OnClickListener() {
-              @Override
-              public void onClick(View view) {
-
-                  RequestThread thread = new RequestThread();
-                  thread.start();
-                  }
-              }
-        );
-
-        MoveSignUp.setOnClickListener(new View.OnClickListener() {
-              @Override
-              public void onClick(View view) {
-                  Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
-                  startActivity(intent);
+                       RequestThread sign_thread = new RequestThread();
+                       sign_thread.start();
+                       }
                 }
-              }
         );
-
     }
-
     class RequestThread extends Thread {
 
         EditText id;
         EditText password;
+        EditText nickname;
+        CheckBox checkMale;
+        CheckBox checkFemale;
+
+        Boolean checkGender = false; //남자가 0, 여자가 1 , 디폴트 남자
 
         @Override
         public void run() {
             try {
-                id = (EditText) findViewById(R.id.id_edit);
-                password = (EditText) findViewById(R.id.password_edit);
+                id = (EditText)findViewById(R.id.edit_id);
+                password = (EditText)findViewById(R.id.edit_password);
+                nickname = (EditText)findViewById(R.id.edit_nickname);
+                checkMale = (CheckBox)findViewById(R.id.check_male);
+                checkFemale = (CheckBox)findViewById(R.id.check_female);
 
-                //URL url = new URL("http://13.125.182.78/api/user");
-                //HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                if(checkFemale.isChecked()==true){ //여자 선택
+                    checkMale.setChecked(false);
+                    checkGender = true;
+                }
+
+                else if(checkMale.isChecked()==true){
+                    checkFemale.setChecked(false);
+                    checkGender = false;
+                }
 
                 try {
                     //JSONObject를 만들고 key value 형식으로 값을 저장해준다.
                     JSONObject jsonObject = new JSONObject();
                     jsonObject.accumulate("id", id.getText().toString());
                     jsonObject.accumulate("password", password.getText().toString());
+                    jsonObject.accumulate("nickname", nickname.getText().toString());
+                    jsonObject.accumulate("gender", checkGender);
 
                     HttpURLConnection con = null;
                     BufferedReader reader = null;
 
                     try {
-                        URL url = new URL("http://13.125.182.78:5000/api/user1"); //연결을 함
+                        URL url = new URL("http://13.125.182.78:5000/api/user"); //연결을 함
                         con = (HttpURLConnection) url.openConnection();
                         con.setRequestMethod("POST");//POST방식으로 보냄
                         con.setRequestProperty("Cache-Control", "no-cache");//캐시 설정
@@ -160,3 +162,4 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 }
+
