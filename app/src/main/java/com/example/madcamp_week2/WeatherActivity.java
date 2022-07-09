@@ -9,6 +9,7 @@ import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONObject;
@@ -26,33 +27,24 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class WeatherActivity extends AppCompatActivity {
-
-    Button Test;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
-
-        Test = (Button) findViewById(R.id.test);
-        Test.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View view) {
-
-                    RequestThread thread = new RequestThread();
-                    thread.start();
-                }
-             }
-        );
+        RequestThread thread = new RequestThread();
+        thread.start();
 
     }
 
     class RequestThread extends Thread {
 
+        TextView degree;
+        TextView rain;
+        TextView snow;
+
         @Override
         public void run() {
             try {
-
                 try {
                     //JSONObject를 만들고 key value 형식으로 값을 저장해준다.
                     HttpURLConnection con = null;
@@ -81,7 +73,26 @@ public class WeatherActivity extends AppCompatActivity {
                         }
 
                         String reqData = buffer.toString();
-                        System.out.println(reqData);
+                        JSONTokener tokener = new JSONTokener(reqData);
+
+                        JSONObject object = (JSONObject) tokener.nextValue();
+                        String tmp = object.getString("tmp").concat("도");
+                        String snow_text = object.getString("snow");
+                        String rain_text = object.getString("rain");
+
+                        runOnUiThread(new Runnable() {
+                                          @Override
+                                          public void run() {
+                                              degree = (TextView)findViewById(R.id.degree);
+                                              rain = (TextView)findViewById(R.id.rain);
+                                              snow = (TextView)findViewById(R.id.snow);
+
+                                              degree.setText(tmp);
+                                              rain.setText(rain_text);
+                                              snow.setText(snow_text);
+                                          }
+                                      }
+                        );
 
                     } catch (MalformedURLException e) {
                         e.printStackTrace();

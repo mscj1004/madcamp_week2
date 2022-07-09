@@ -76,4 +76,9 @@ public class Fragment_3 extends Fragment {
 
         return rootView;
     }
+
+    class addThread extends Thread{
+
+
+    }
 }
