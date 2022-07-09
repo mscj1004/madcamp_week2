@@ -16,6 +16,7 @@
         <activity
             android:name=".Addactivity"
             android:exported="false" />
+
         <activity
             android:hardwareAccelerated="false"
             android:name=".WeatherActivity"
