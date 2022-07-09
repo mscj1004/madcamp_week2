@@ -35,11 +35,14 @@ public class Fragment_2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_2, container, false);
+        Intent intent = getActivity().getIntent();
+        String gender=intent.getStringExtra("gender"); //0이 남자, 1(true)이 여자
         Test = rootView.findViewById(R.id.button_test);
         Test.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View view) {
                      Intent intent = new Intent(getActivity(), WeatherActivity.class);
+                     intent.putExtra("gender",gender);
                      startActivity(intent);
                      }
               }

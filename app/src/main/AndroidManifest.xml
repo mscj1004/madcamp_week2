@@ -13,14 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Madcamp_week2"
         android:usesCleartextTraffic="true">
+        <activity android:name=".StyleActivity"></activity>
         <activity
             android:name=".Addactivity"
             android:exported="false" />
-
         <activity
-            android:hardwareAccelerated="false"
             android:name=".WeatherActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:hardwareAccelerated="false" />
         <activity
             android:name=".SignupActivity"
             android:exported="true" />
@@ -38,9 +38,9 @@
             android:exported="false"
             android:hardwareAccelerated="false" />
         <activity
-            android:hardwareAccelerated="false"
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:hardwareAccelerated="false" />
     </application>
 
 </manifest>

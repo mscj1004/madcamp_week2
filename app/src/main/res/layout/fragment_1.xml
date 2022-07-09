@@ -8,17 +8,33 @@
     android:background="@color/white"
     tools:context=".Fragment_1">
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="허리 디스크님,"
-        android:textSize="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
-        android:fontFamily="@font/medium"
-        android:textColor="@color/bold_red"
         >
-    </TextView>
+        <TextView
+            android:id="@+id/nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="허리 디스크"
+            android:textSize="30dp"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/bold_red"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="님,"
+            android:textSize="30dp"
+            android:fontFamily="@font/medium"
+            android:textColor="@color/bold_red"
+            >
+        </TextView>
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

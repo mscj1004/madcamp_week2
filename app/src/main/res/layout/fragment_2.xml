@@ -33,7 +33,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="마법옷장에서 제공하는 날씨 정의 경우, 공공데이터 API에서 받아와 사용합니다."
+                android:text="마법옷장에서 제공하는 날씨 정보의 경우, 공공데이터 API에서 받아와 사용합니다."
                 android:textSize="16dp"
                 android:fontFamily="@font/regular"
                 android:textColor="@color/bold_red"

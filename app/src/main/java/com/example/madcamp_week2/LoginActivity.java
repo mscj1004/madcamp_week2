@@ -29,6 +29,8 @@ import java.net.URL;
 
 public class LoginActivity extends AppCompatActivity {
 
+    String Nickname;
+    String Gender;
     Button Login;
     Button MoveSignUp;
 
@@ -123,7 +125,11 @@ public class LoginActivity extends AppCompatActivity {
                         String message = object.getString("message");
 
                         if(loginSuccess=="true"){
+                            Nickname = object.getString("nickname");
+                            Gender = object.getString("gender");
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            intent.putExtra("nickname",Nickname);
+                            intent.putExtra("gender",Gender);
                             startActivity(intent);startActivity(intent);
                             Handler handler = new Handler(Looper.getMainLooper());
                             handler.postDelayed(new Runnable() {

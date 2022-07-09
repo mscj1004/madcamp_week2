@@ -9,14 +9,22 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class Fragment_1 extends Fragment {
 
+    TextView nickname_view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Intent intent = getActivity().getIntent();
+        String nickname=intent.getStringExtra("nickname");
+
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_1, container, false);
+
+        nickname_view=rootView.findViewById(R.id.nick_name);
+        nickname_view.setText(nickname);
 
         return rootView;
     }
