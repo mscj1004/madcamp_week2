@@ -4,4 +4,6 @@
     <string name="tab_text_2">홈</string>
     <string name="tab_text_3">코디</string>
     <string name="tab_text_4">공유</string>
+    <string name="home_button"><u>옷 추천받으러 가기</u></string>
+    <string name="sign_up_button"><u>회원가입하러 가기</u></string>
 </resources>

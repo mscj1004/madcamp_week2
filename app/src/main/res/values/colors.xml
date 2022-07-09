@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="login_bg">#FEF8F0</color>
+    <color name="login_light_bg">#FFFCF9</color>
     <color name="bold_red">#B75B52</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="splash_bg_red">#E28D8D</color>

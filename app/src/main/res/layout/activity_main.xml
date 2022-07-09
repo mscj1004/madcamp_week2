@@ -17,8 +17,14 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
+        app:tabIconTint="@color/bold_red"
+        app:tabTextColor="@color/bold_red"
+        app:tabPaddingTop="10dp"
+        app:tabTextAppearance="@style/under_tab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/bold_red"
+        app:tabIndicatorGravity="bottom"
         android:background="@color/login_bg"
         android:layout_gravity="bottom">
 

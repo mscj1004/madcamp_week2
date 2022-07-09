@@ -1,14 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="60dp"
+    android:background="@color/white"
     tools:context=".Fragment_1">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="/hello_blank_fragment1" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="허리 디스크님,"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/medium"
+        android:textColor="@color/bold_red"
+        >
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 날씨에는"
+        android:textSize="20dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/medium"
+        android:textColor="@color/bold_red"
+        >
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이런 옷이 어울려요."
+        android:textSize="20dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/medium"
+        android:textColor="@color/bold_red"
+        >
+    </TextView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="160dp"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fontFamily="@font/medium"
+        android:text="@string/home_button"
+        android:textColor="@color/bold_red"></androidx.appcompat.widget.AppCompatButton>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="380dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="230dp"
+        android:background="@drawable/main_home"
+        >
+    </androidx.appcompat.widget.AppCompatButton>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/regular"
+        android:textSize="18dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="260dp"
+        android:text="최근 저장한"
+        android:textColor="@color/bold_red"
+        >
+    </TextView>
+    <TextView
+        android:textColor="@color/bold_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:fontFamily="@font/regular"
+        android:textSize="18dp"
+        android:elevation="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="300dp"
+        android:text="코디 보러가기"
+        >
+    </TextView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="380dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="420dp"
+        android:background="@drawable/main_home"
+        >
+    </androidx.appcompat.widget.AppCompatButton>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/regular"
+        android:textSize="18dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="450dp"
+        android:text="다른 사람"
+        android:textColor="@color/bold_red"
+        >
+    </TextView>
+    <TextView
+        android:textColor="@color/bold_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:fontFamily="@font/regular"
+        android:textSize="18dp"
+        android:elevation="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="490dp"
+        android:text="코디 보러가기"
+        >
+    </TextView>
 </FrameLayout>

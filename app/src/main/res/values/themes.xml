@@ -15,4 +15,12 @@
         <item name="windowNoTitle">true</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style
+        name="under_tab"
+        parent="TextAppearance.Design.Tab"
+        >
+        <item name="fontFamily">@font/medium</item>
+        <item name="android:textSize">12dp</item>
+    </style>
 </resources>
