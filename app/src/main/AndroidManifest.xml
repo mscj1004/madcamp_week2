@@ -17,6 +17,10 @@
             android:name=".Addactivity"
             android:exported="false" />
         <activity
+            android:hardwareAccelerated="false"
+            android:name=".WeatherActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignupActivity"
             android:exported="true" />
         <activity
@@ -33,6 +37,7 @@
             android:exported="false"
             android:hardwareAccelerated="false" />
         <activity
+            android:hardwareAccelerated="false"
             android:name=".MainActivity"
             android:exported="false" />
     </application>
