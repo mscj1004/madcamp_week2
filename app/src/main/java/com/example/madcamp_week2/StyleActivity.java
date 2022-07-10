@@ -136,7 +136,7 @@ public class StyleActivity extends AppCompatActivity {
 
                 try{
                     JSONObject jsonobject= new JSONObject();
-                    jsonobject.accumulate("id", id);
+                    jsonobject.accumulate("userid", id);
                     jsonobject.accumulate("gender", false);
                     jsonobject.accumulate("public", checkBox.isChecked());
                     jsonobject.accumulate("top", ttm.getSelectedItem());
@@ -246,7 +246,7 @@ public class StyleActivity extends AppCompatActivity {
 
                 try{
                     JSONObject jsonobject= new JSONObject();
-                    jsonobject.accumulate("id", id);
+                    jsonobject.accumulate("userid", id);
                     jsonobject.accumulate("gender", true);
                     jsonobject.accumulate("public", checkBox.isChecked());
                     jsonobject.accumulate("top", ttw.getSelectedItem());
