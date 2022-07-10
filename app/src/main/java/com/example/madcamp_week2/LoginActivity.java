@@ -31,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
     String Nickname;
     String Gender;
+    String ID;
     Button Login;
     Button MoveSignUp;
 
@@ -127,9 +128,12 @@ public class LoginActivity extends AppCompatActivity {
                         if(loginSuccess=="true"){
                             Nickname = object.getString("nickname");
                             Gender = object.getString("gender");
+                            ID = object.getString("id");
+
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             intent.putExtra("nickname",Nickname);
                             intent.putExtra("gender",Gender);
+                            intent.putExtra("id",ID);
                             startActivity(intent);startActivity(intent);
                             Handler handler = new Handler(Looper.getMainLooper());
                             handler.postDelayed(new Runnable() {
