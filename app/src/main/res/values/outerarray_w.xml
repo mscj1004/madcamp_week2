@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name='outer_w'>
+        <item>없음</item>
+        <item>패딩</item>
+        <item>코트</item>
+        <item>가디건</item>
+        <item>트위드</item>
+
+    </string-array>
+</resources>

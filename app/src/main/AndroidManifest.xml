@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Madcamp_week2"
         android:usesCleartextTraffic="true">
-        <activity android:name=".StyleActivity"></activity>
+        <activity
+            android:name=".Addactivity_woman"
+            android:exported="false" />
+        <activity android:name=".StyleActivity" />
         <activity
             android:name=".Addactivity"
             android:exported="false" />

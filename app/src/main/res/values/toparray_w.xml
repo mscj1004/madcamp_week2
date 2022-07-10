@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="woman_top">
+        <item>없음</item>
+        <item>스웨터</item>
+        <item>원피스</item>
+        <item>니트</item>
+        <item>블라우스</item>
+
+    </string-array>
+</resources>

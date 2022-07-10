@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bottom_w">
+        <item>없음</item>
+        <item>진</item>
+        <item>스커트</item>
+        <item>레깅스</item>
+        <item>미니스커트</item>
+        <itme>긴바지</itme>
+
+    </string-array>
+</resources>
