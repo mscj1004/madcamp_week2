@@ -19,12 +19,15 @@ public class Fragment_3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_3, container, false);
+        Intent intent = getActivity().getIntent();
+        String id=intent.getStringExtra("id");
 
         move_activity = rootView.findViewById(R.id.move_style);
         move_activity.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
                                         Intent intent = new Intent(getActivity(), StyleActivity.class);
+                                        intent.putExtra("id",id);
                                         startActivity(intent);
                                     }
                                 }

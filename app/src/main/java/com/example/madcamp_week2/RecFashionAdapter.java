@@ -1,5 +1,7 @@
 package com.example.madcamp_week2;
 
+import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +18,7 @@ public class RecFashionAdapter extends RecyclerView.Adapter<RecFashionAdapter.My
 
     //리스트는 무조건 데이터를 필요로함
     private List<Fashion> items=new ArrayList<>();
+    private Context context;
 
     public void addItem(Fashion fashion){
         items.add(fashion);
@@ -65,6 +68,15 @@ public class RecFashionAdapter extends RecyclerView.Adapter<RecFashionAdapter.My
             accessory=itemView.findViewById(R.id.accessory);
             outerColor=itemView.findViewById(R.id.outer_color);
             outer=itemView.findViewById(R.id.outer);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), DetailActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+            });
+
         }
 
         //규칙3
