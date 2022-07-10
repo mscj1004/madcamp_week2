@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
-            android:entries="@array/man_top"
+            android:entries="@array/woman_top"
             android:spinnerMode="dropdown" />
 
         <Spinner
@@ -157,7 +157,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
-            android:entries="@array/man_bottom" />
+            android:entries="@array/bottom_w" />
 
         <Spinner
             android:id="@+id/sp_bottom_color_w"
@@ -224,7 +224,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
-            android:entries="@array/man_acc" />
+            android:entries="@array/accessory_w" />
 
         <Spinner
             android:id="@+id/sp_accessory_color_w"
@@ -290,7 +290,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
-            android:entries="@array/man_outer" />
+            android:entries="@array/outer_w" />
 
         <Spinner
             android:id="@+id/sp_outer_color_w"

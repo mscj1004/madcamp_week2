@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name=""
+    <string-array name="accessory_w">
+        <item>없음</item>
+        <item>목도리</item>
+        <item>팔찌</item>
+        <item>모자</item>
+    </string-array>
 </resources>

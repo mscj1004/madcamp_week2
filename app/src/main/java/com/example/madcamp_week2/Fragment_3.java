@@ -21,6 +21,8 @@ public class Fragment_3 extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_3, container, false);
         Intent intent = getActivity().getIntent();
         String id=intent.getStringExtra("id");
+        String gender =intent.getStringExtra("gender");
+        String nickname=intent.getStringExtra("nickname");
 
         move_activity = rootView.findViewById(R.id.move_style);
         move_activity.setOnClickListener(new View.OnClickListener() {
@@ -28,6 +30,8 @@ public class Fragment_3 extends Fragment {
                                     public void onClick(View view) {
                                         Intent intent = new Intent(getActivity(), StyleActivity.class);
                                         intent.putExtra("id",id);
+                                        intent.putExtra("gender",gender);
+                                        intent.putExtra("nickname",nickname);
                                         startActivity(intent);
                                     }
                                 }
