@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/memo_bg"
+    android:background="@color/login_light_bg"
     tools:context=".WeatherActivity">
 
     <LinearLayout
@@ -157,6 +157,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
+        android:id="@+id/top_text8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
@@ -172,5 +173,29 @@
         >
     </TextView>
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_text8"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></androidx.recyclerview.widget.RecyclerView>
+    <TextView
+        android:fontFamily="@font/regular"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view"
+        android:text="좌우로 스와이프하여 확인해 보세요."
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:textColor="#555555"
+        android:layout_height="wrap_content">
+    </TextView>
 </androidx.constraintlayout.widget.ConstraintLayout>
