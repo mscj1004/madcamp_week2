@@ -328,7 +328,7 @@
         android:layout_width="80dp"
         android:layout_height="49dp"
         android:layout_gravity="center"
-        android:backgroundTint="@color/splash_bg_red"
+        android:backgroundTint="@color/bold_red"
         android:text="등록"
         android:textColor="@color/white"
         tools:ignore="MissingConstraints"
