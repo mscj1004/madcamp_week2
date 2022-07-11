@@ -25,6 +25,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class Detail_Activity extends AppCompatActivity {
 
@@ -37,6 +38,8 @@ public class Detail_Activity extends AppCompatActivity {
     String Bottom;
     String Outer;
     String Accessory;
+
+    ArrayList<Shopping> shopping_list = new ArrayList<Shopping>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,12 +126,13 @@ public class Detail_Activity extends AppCompatActivity {
                             title = shoppingArray.getJSONObject(i).getString("title");
                             price = shoppingArray.getJSONObject(i).getString("price");
                             link = shoppingArray.getJSONObject(i).getString("url");
+                            shopping_list.add(new Shopping(title,price,link));
                             adapter.addItem(new Shopping(title,price,link));
                             adapter.notifyDataSetChanged();
                             adapter.setOnItemClickListener(new ShoppingAdapter.OnItemClickListener() {
                                 @Override
                                 public void onItemClick(View v, int position) {
-                                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+                                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(shopping_list.get(position).getLink()));
                                     startActivity(intent);
                                 }
                             });
@@ -225,7 +229,7 @@ public class Detail_Activity extends AppCompatActivity {
                             adapter.setOnItemClickListener(new ShoppingAdapter.OnItemClickListener() {
                                 @Override
                                 public void onItemClick(View v, int position) {
-                                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+                                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(shopping_list.get(position).getLink()));
                                     startActivity(intent);
                                 }
                             });
@@ -322,7 +326,7 @@ public class Detail_Activity extends AppCompatActivity {
                             adapter.setOnItemClickListener(new ShoppingAdapter.OnItemClickListener() {
                                 @Override
                                 public void onItemClick(View v, int position) {
-                                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+                                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(shopping_list.get(position).getLink()));
                                     startActivity(intent);
                                 }
                             });
@@ -419,7 +423,7 @@ public class Detail_Activity extends AppCompatActivity {
                             adapter.setOnItemClickListener(new ShoppingAdapter.OnItemClickListener() {
                                 @Override
                                 public void onItemClick(View v, int position) {
-                                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+                                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(shopping_list.get(position).getLink()));
                                     startActivity(intent);
                                 }
                             });
