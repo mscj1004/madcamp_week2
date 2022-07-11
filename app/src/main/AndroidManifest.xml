@@ -13,13 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Madcamp_week2"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Detail_Activity"></activity>
+        <activity android:name=".weather.Detail_Activity"></activity>
         <activity android:name=".StyleActivity" />
         <activity
-            android:name=".Addactivity"
-            android:exported="false" />
-        <activity
-            android:name=".WeatherActivity"
+            android:name=".weather.WeatherActivity"
             android:exported="false"
             android:hardwareAccelerated="false" />
         <activity

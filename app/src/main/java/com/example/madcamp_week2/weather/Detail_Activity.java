@@ -1,4 +1,4 @@
-package com.example.madcamp_week2;
+package com.example.madcamp_week2.weather;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,18 +10,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.madcamp_week2.R;
+import com.example.madcamp_week2.weather.Shopping;
+import com.example.madcamp_week2.weather.ShoppingAdapter;
+
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
