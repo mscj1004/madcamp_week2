@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -49,7 +52,7 @@ public class StyleActivity extends AppCompatActivity {
         id = intent.getStringExtra("id");
 
         TextView style_text = findViewById(R.id.style_text);
-
+        style_text.setText(nickname + "님의 코디를 골라보세요");
 
         //gender 0
         LinearLayout top_m = findViewById(R.id.top_m);
@@ -69,7 +72,7 @@ public class StyleActivity extends AppCompatActivity {
         LinearLayout acc_w = findViewById(R.id.accessory_w);
         LinearLayout outer_w =findViewById(R.id.outer_w);
 
-
+        Log.d("test", gender);
 
         add_btn = findViewById(R.id.add_btn);
 
@@ -192,10 +195,22 @@ public class StyleActivity extends AppCompatActivity {
                         String message = object.getString("message");
 
                         if(addSuccess == "true"){
-                            Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+                            Handler handler = new Handler(Looper.getMainLooper());
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+                                }
+                            },0);
                         }
                         else if(addSuccess == "false"){
-                            Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+                            Handler handler = new Handler(Looper.getMainLooper());
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+                                }
+                            }, 0);
                         }
 
                     } catch (ProtocolException e) {
@@ -233,6 +248,7 @@ public class StyleActivity extends AppCompatActivity {
         @Override
         public void run(){
             try{
+                checkBox = findViewById(R.id.style_cb);
                 ttw = findViewById(R.id.sp_top_type_w);
                 tcw = findViewById(R.id.sp_top_color_w);
                 btw = findViewById(R.id.sp_bottom_type_w);
@@ -241,7 +257,6 @@ public class StyleActivity extends AppCompatActivity {
                 acw = findViewById(R.id.sp_accessory_color_w);
                 otw = findViewById(R.id.sp_outer_type_w);
                 ocw = findViewById(R.id.sp_outer_color_w);
-
 
 
                 try{
@@ -263,6 +278,7 @@ public class StyleActivity extends AppCompatActivity {
 
                     try{
                         URL url = new URL("http://13.125.182.78:5000/api/add");
+                        Log.d("test1", "success");
                         con = (HttpURLConnection) url.openConnection();
                         con.setRequestMethod("POST");
                         con.setRequestProperty("Cache-Control", "no-cache");
@@ -302,10 +318,22 @@ public class StyleActivity extends AppCompatActivity {
                         String message = object.getString("message");
 
                         if(addSuccess == "true"){
-                            Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+                            Handler handler = new Handler(Looper.getMainLooper());
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+                                }
+                            },0);
                         }
                         else if(addSuccess == "false"){
-                            Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+                            Handler handler = new Handler(Looper.getMainLooper());
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+                                }
+                            }, 0);
                         }
 
                     } catch (ProtocolException e) {
