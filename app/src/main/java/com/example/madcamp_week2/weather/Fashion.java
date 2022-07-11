@@ -1,4 +1,4 @@
-package com.example.madcamp_week2;
+package com.example.madcamp_week2.weather;
 
 public class Fashion {
     private String Top;

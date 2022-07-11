@@ -1,4 +1,4 @@
-package com.example.madcamp_week2;
+package com.example.madcamp_week2.main;
 
 import android.content.Context;
 
@@ -8,6 +8,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.madcamp_week2.share.Shared_Fragment;
+import com.example.madcamp_week2.R;
+import com.example.madcamp_week2.style.Style_Fragment;
 import com.example.madcamp_week2.weather.Weather_Fragment;
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
@@ -28,7 +31,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment = null;
         switch(position){
             case 0:
-                fragment = new Fragment_1();
+                fragment = new Home_Fragment();
                 break;
 
             case 1:
@@ -36,11 +39,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 break;
 
             case 2:
-                fragment = new Fragment_3();
+                fragment = new Style_Fragment();
                 break;
 
             case 3:
-                fragment = new Fragment_4();
+                fragment = new Shared_Fragment();
                 break;
         }
         return fragment;

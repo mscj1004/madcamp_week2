@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.madcamp_week2.Fashion;
 import com.example.madcamp_week2.R;
 
 import org.json.JSONArray;

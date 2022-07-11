@@ -1,4 +1,4 @@
-package com.example.madcamp_week2;
+package com.example.madcamp_week2.style;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,9 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Spinner;
 
-public class Fragment_3 extends Fragment {
+import com.example.madcamp_week2.R;
+
+public class Style_Fragment extends Fragment {
 
     Button move_activity;
 

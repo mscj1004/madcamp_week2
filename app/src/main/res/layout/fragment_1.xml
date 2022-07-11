@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="60dp"
     android:background="@color/white"
-    tools:context=".Fragment_1">
+    tools:context=".main.Home_Fragment">
 
     <LinearLayout
         android:layout_width="wrap_content"

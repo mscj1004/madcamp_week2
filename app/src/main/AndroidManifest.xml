@@ -14,16 +14,16 @@
         android:theme="@style/Theme.Madcamp_week2"
         android:usesCleartextTraffic="true">
         <activity android:name=".weather.Detail_Activity"></activity>
-        <activity android:name=".StyleActivity" />
+        <activity android:name=".style.StyleActivity" />
         <activity
             android:name=".weather.WeatherActivity"
             android:exported="false"
             android:hardwareAccelerated="false" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".main.SignupActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".main.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,11 +32,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SplashActivity"
+            android:name=".main.SplashActivity"
             android:exported="false"
             android:hardwareAccelerated="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".main.MainActivity"
             android:exported="false"
             android:hardwareAccelerated="false" />
     </application>
