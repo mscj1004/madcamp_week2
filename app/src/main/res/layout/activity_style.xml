@@ -5,22 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".style.StyleActivity"
+    android:background="@drawable/tab3_bg"
     android:orientation="vertical">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
     <TextView
         android:id="@+id/style_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hong 님의 코디를 골라보세요"
+        android:textSize="28dp"
+
+        android:textColor="@color/splash_bg_red"
+        android:fontFamily="@font/regular"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="32dp" />
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="32dp"
+        android:layout_gravity="center"/>
+</LinearLayout>
 
     <CheckBox
         android:id="@+id/style_cb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="공유"
+        android:textColor="@color/splash_bg_red"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="48dp"
         tools:layout_editor_absoluteY="51dp" />
@@ -32,13 +43,14 @@
         android:background="@color/login_bg"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="100dp">
+        tools:layout_editor_absoluteY="150dp">
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="상의/색깔" />
+            android:text="상의/색깔"
+            android:textColor="@color/splash_bg_red"/>
 
 
         <Spinner
@@ -78,7 +90,8 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="상의/색깔" />
+            android:text="상의/색깔"
+            android:textColor="@color/splash_bg_red"/>
 
 
         <Spinner
@@ -116,6 +129,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="하의/색깔"
+            android:textColor="@color/splash_bg_red"
 
             />
 
@@ -150,7 +164,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="하의/색깔"
-
+            android:textColor="@color/splash_bg_red"
             />
 
         <Spinner
@@ -184,7 +198,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="액세서리/색깔"
-
+            android:textColor="@color/splash_bg_red"
             />
 
         <Spinner
@@ -218,6 +232,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="액세서리/색깔"
+            android:textColor="@color/splash_bg_red"
 
             />
 
@@ -251,6 +266,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="겉옷/색깔"
+            android:textColor="@color/splash_bg_red"
 
             />
 
@@ -285,7 +301,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="겉옷/색깔"
-
+            android:textColor="@color/splash_bg_red"
             />
 
         <Spinner
@@ -304,15 +320,17 @@
             android:backgroundTint="@color/black"
             android:entries="@array/color_arr" />
     </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"/>
     <Button
         android:id="@+id/add_btn"
         android:layout_width="80dp"
         android:layout_height="49dp"
         android:layout_gravity="center"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="@color/splash_bg_red"
         android:text="등록"
-        android:textColor="@color/splash_bg_red"
+        android:textColor="@color/white"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="165dp"
         tools:layout_editor_absoluteY="609dp" />
