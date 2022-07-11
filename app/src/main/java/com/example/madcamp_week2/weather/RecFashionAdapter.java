@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.madcamp_week2.Fashion;
 import com.example.madcamp_week2.R;
 
 import java.util.ArrayList;

@@ -1,14 +1,12 @@
-package com.example.madcamp_week2;
+package com.example.madcamp_week2.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 
+import com.example.madcamp_week2.R;
 import com.google.android.material.tabs.TabLayout;
-import com.example.madcamp_week2.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragment_3">
+    tools:context=".style.Style_Fragment">
 
     <ScrollView
         android:layout_width="match_parent"

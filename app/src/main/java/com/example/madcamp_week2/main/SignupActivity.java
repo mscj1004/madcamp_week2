@@ -1,4 +1,4 @@
-package com.example.madcamp_week2;
+package com.example.madcamp_week2.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -13,7 +13,10 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import org.json.JSONException;
+import com.example.madcamp_week2.R;
+import com.example.madcamp_week2.main.LoginActivity;
+import com.example.madcamp_week2.main.MainActivity;
+
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
