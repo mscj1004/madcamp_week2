@@ -33,6 +33,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -52,6 +53,7 @@ public class WeatherActivity extends AppCompatActivity {
     String Outer_color;
 
     private RecyclerView rvFashion;
+    ArrayList<Fashion> fashion_list = new ArrayList<Fashion>();
 
     RecFashionAdapter adapter = new RecFashionAdapter();
 
@@ -208,7 +210,7 @@ public class WeatherActivity extends AppCompatActivity {
                             Top = fashionArray.getJSONObject(i).getString("top");
                             Top_color = fashionArray.getJSONObject(i).getString("top_color");
                             Bottom = fashionArray.getJSONObject(i).getString("bottom");
-                            System.out.println(Bottom);
+
                             if(Bottom.equals("없음")){
                                 Bottom="";
                             }
@@ -232,23 +234,25 @@ public class WeatherActivity extends AppCompatActivity {
                             if(Outer_color.equals("없음")){
                                 Outer_color="";
                             }
+                            fashion_list.add(new Fashion(Top, Top_color, Bottom, Bottom_color, Accessory, Accessory_color, Outer, Outer_color));
                             adapter.addItem(new Fashion(Top, Top_color, Bottom, Bottom_color, Accessory, Accessory_color, Outer, Outer_color));
                             adapter.notifyDataSetChanged();
                             adapter.setOnItemClickListener(new RecFashionAdapter.OnItemClickListener() {
                                 @Override
                                 public void onItemClick(View v, int position) {
+
                                     Intent intent = new Intent(getApplicationContext(), Detail_Activity.class);
                                     if(!Bottom_color.equals("")){
-                                        intent.putExtra("Bottom",Bottom_color.concat(Bottom));
+                                        intent.putExtra("Bottom",fashion_list.get(position).getBottom_color().concat(fashion_list.get(position).getBottom()));
                                     }
                                     if(!Top_color.equals("")){
-                                        intent.putExtra("Top",Top_color.concat(Top));
+                                        intent.putExtra("Top",fashion_list.get(position).getTop_color().concat(fashion_list.get(position).getTop()));
                                     }
                                     if(!Accessory_color.equals("")){
-                                        intent.putExtra("Accessory",Accessory_color.concat(Accessory));
+                                        intent.putExtra("Accessory",fashion_list.get(position).getAccessory_color().concat(fashion_list.get(position).getAccessory()));
                                     }
                                     if(!Outer_color.equals("")){
-                                        intent.putExtra("Outer",Outer_color.concat(Outer));
+                                        intent.putExtra("Outer",fashion_list.get(position).getOuter().concat(fashion_list.get(position).getOuter()));
                                     }
                                     startActivity(intent);
                                 }

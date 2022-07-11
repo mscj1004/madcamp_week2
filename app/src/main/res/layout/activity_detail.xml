@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/login_light_bg"
-    tools:context=".Detail_Activity">
+    tools:context=".Detail_Activity"
+    android:orientation="vertical"
+    >
     <TextView
         android:id="@+id/top_text"
         android:layout_width="wrap_content"
@@ -36,25 +39,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="-30dp"
         android:layout_marginLeft="30dp"
         android:text="쇼핑몰에서 확인해보세요.">
     </TextView>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/top_text2"
         app:layout_constraintVertical_bias="0.0"
-        android:layout_marginBottom="30dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="100dp"
             android:orientation="vertical"
             >
             <TextView
@@ -116,35 +119,6 @@
                 android:layout_height="wrap_content"
                 ></androidx.recyclerview.widget.RecyclerView>
             <TextView
-                android:id="@+id/outer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/regular"
-                android:textColor="@color/bold_red"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                android:layout_marginTop="10dp"
-                tools:text="겉옷"
-                >
-            </TextView>
-            <androidx.recyclerview.widget.RecyclerView
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/top_text8"
-                app:layout_constraintVertical_bias="0.0"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:id="@+id/outer_recycler_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                ></androidx.recyclerview.widget.RecyclerView>
-            <TextView
                 android:id="@+id/accessory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -173,9 +147,37 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 ></androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                android:id="@+id/outer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/bold_red"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginTop="10dp"
+                tools:text="겉옷"
+                >
+            </TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/top_text8"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/outer_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ></androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
     </ScrollView>
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
