@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Madcamp_week2"
         android:usesCleartextTraffic="true">
-        <activity android:name=".weather.Detail_Activity"></activity>
+        <activity android:name=".share.SharedActivity"></activity>
+        <activity android:name=".weather.Detail_Activity" />
         <activity android:name=".style.StyleActivity" />
         <activity
             android:name=".weather.WeatherActivity"
