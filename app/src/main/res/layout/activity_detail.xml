@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/login_light_bg"
-    tools:context=".Detail_Activity"
+    tools:context=".weather.Detail_Activity"
     android:orientation="vertical"
     >
     <TextView

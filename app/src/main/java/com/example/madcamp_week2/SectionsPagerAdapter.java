@@ -4,10 +4,11 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import com.example.madcamp_week2.weather.Weather_Fragment;
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
@@ -31,7 +32,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 break;
 
             case 1:
-                fragment = new Fragment_2();
+                fragment = new Weather_Fragment();
                 break;
 
             case 2:

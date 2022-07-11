@@ -1,9 +1,6 @@
-package com.example.madcamp_week2;
+package com.example.madcamp_week2.weather;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.madcamp_week2.R;
 
 import java.util.ArrayList;
 import java.util.List;
