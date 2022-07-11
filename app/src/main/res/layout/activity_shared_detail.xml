@@ -83,7 +83,6 @@
         app:layout_constraintVertical_bias="0.1">
 
         <TextView
-            android:id="@+id/bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/dokdo"
@@ -92,6 +91,7 @@
             android:textSize="27dp"></TextView>
 
         <TextView
+            android:id="@+id/bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/dokdo"
@@ -114,7 +114,6 @@
         app:layout_constraintVertical_bias="0.1">
 
         <TextView
-            android:id="@+id/outer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/dokdo"
@@ -123,6 +122,7 @@
             android:textSize="27dp"></TextView>
 
         <TextView
+            android:id="@+id/outer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/dokdo"

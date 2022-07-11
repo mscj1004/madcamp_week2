@@ -35,42 +35,45 @@ public class SharedDetailActivity extends AppCompatActivity {
         Nickname = getIntent().getStringExtra("nickname");
         Top = getIntent().getStringExtra("top");
         Top_color = getIntent().getStringExtra("top_color");
-        Top = Top.concat(Top_color);
+        Top = Top_color.concat(Top);
 
         Bottom = getIntent().getStringExtra("bottom");
         Bottom_color = getIntent().getStringExtra("bottom_color");
-        if(Bottom==null||Bottom_color==null){
+        if(Bottom.equals("없음")||Bottom_color.equals("없음")){
             Bottom = "없음";
             Bottom_color = "";
+            Bottom = Bottom_color.concat(Bottom);
         }
-        else if(Bottom!=null && Bottom_color!=null){
-            Bottom = Bottom.concat(Bottom_color);
+        else if(!Bottom.equals("없음") && !Bottom_color.equals("없음")){
+            Bottom = Bottom_color.concat(Bottom);
         }
 
         Accessory = getIntent().getStringExtra("accessory");
         Accessory_color = getIntent().getStringExtra("accessory_color");
-        if(Accessory==null||Accessory_color==null){
+        if(Accessory.equals("없음")||Accessory_color.equals("없음")){
             Accessory = "없음";
             Accessory_color = "";
+            Accessory = Accessory_color.concat(Accessory);
         }
-        else if(Accessory!=null && Accessory_color!=null){
-            Accessory = Accessory.concat(Accessory_color);
+        else if(!Accessory.equals("없음") && !Accessory_color.equals("없음")){
+            Accessory = Accessory_color.concat(Accessory);
         }
 
         Outer = getIntent().getStringExtra("outer");
         Outer_color = getIntent().getStringExtra("outer_color");
-        if(Outer==null||Outer_color==null){
+        if(Outer.equals("없음")||Outer_color.equals("없음")){
             Outer = "없음";
             Outer_color = "";
+            Outer = Outer_color.concat(Outer);
         }
-        else if(Outer!=null && Outer_color!=null){
-            Outer = Outer.concat(Outer_color);
+        else if(!Outer.equals("없음") && !Outer_color.equals("없음")){
+            Outer = Outer_color.concat(Outer);
         }
 
         Top_view = (TextView)findViewById(R.id.top);
         Bottom_view = (TextView)findViewById(R.id.bottom);
         Outer_view = (TextView)findViewById(R.id.outer);
-        Accessory_view = (TextView)findViewById(R.id.outer);
+        Accessory_view = (TextView)findViewById(R.id.accessory);
         Nickname_view = (TextView)findViewById(R.id.nick_name);
 
         Top_view.setText(Top);
