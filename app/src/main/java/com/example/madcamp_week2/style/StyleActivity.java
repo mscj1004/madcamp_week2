@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.madcamp_week2.R;
+import com.example.madcamp_week2.main.MainActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -201,6 +202,11 @@ public class StyleActivity extends AppCompatActivity {
                             handler.postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    intent.putExtra("nickname",nickname);
+                                    intent.putExtra("gender",gender);
+                                    intent.putExtra("id",id);
+                                    startActivity(intent);
                                     Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
                                 }
                             },0);
@@ -324,6 +330,11 @@ public class StyleActivity extends AppCompatActivity {
                             handler.postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    intent.putExtra("nickname",nickname);
+                                    intent.putExtra("gender",gender);
+                                    intent.putExtra("id",id);
+                                    startActivity(intent);
                                     Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
                                 }
                             },0);
