@@ -58,6 +58,7 @@
         >
     </TextView>
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/go_Tab2"
         android:layout_marginRight="30dp"
         android:layout_marginTop="160dp"
         android:layout_gravity="end"
@@ -69,6 +70,7 @@
         android:textColor="@color/bold_red"></androidx.appcompat.widget.AppCompatButton>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/go_Tab3"
         android:layout_width="320dp"
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
@@ -84,7 +86,7 @@
         android:fontFamily="@font/regular"
         android:textSize="18dp"
         android:layout_marginTop="260dp"
-        android:text="최근 저장한"
+        android:text="새로운 내"
         android:textColor="@color/bold_red"
         >
     </TextView>
@@ -98,11 +100,12 @@
         android:layout_marginLeft="80dp"
 
         android:layout_marginTop="300dp"
-        android:text="코디 보러가기"
+        android:text="코디 저장하기"
         >
     </TextView>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/go_Tab4"
         android:layout_width="320dp"
         android:layout_height="150dp"
         android:layout_marginLeft="10dp"
