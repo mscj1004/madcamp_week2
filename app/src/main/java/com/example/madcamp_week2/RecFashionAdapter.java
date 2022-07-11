@@ -15,11 +15,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RecFashionAdapter extends RecyclerView.Adapter<RecFashionAdapter.MyViewHolder>{
-
+    private OnItemClickListener iListener = null;
     //리스트는 무조건 데이터를 필요로함
     private List<Fashion> items=new ArrayList<>();
     private Context context;
 
+    interface OnItemClickListener{
+        void onItemClick(View v, int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        this.iListener = listener;
+    }
     public void addItem(Fashion fashion){
         items.add(fashion);
     }
@@ -46,7 +53,7 @@ public class RecFashionAdapter extends RecyclerView.Adapter<RecFashionAdapter.My
     }
 
     //ViewHolder : 뷰들의 책꽂이
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder {
 
         //규칙1
         private TextView topColor;
@@ -70,12 +77,17 @@ public class RecFashionAdapter extends RecyclerView.Adapter<RecFashionAdapter.My
             outer=itemView.findViewById(R.id.outer);
 
             itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(v.getContext(), DetailActivity.class);
-                    v.getContext().startActivity(intent);
+                 @Override
+                 public void onClick(View v) {
+                     int position = getAdapterPosition();
+                     if(position!=RecyclerView.NO_POSITION){
+                      if(iListener!=null){
+                          iListener.onItemClick(v, position);
+                      }
+                     }
+                    }
                 }
-            });
+            );
 
         }
 

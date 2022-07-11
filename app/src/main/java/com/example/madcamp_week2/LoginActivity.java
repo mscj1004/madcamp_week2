@@ -134,7 +134,7 @@ public class LoginActivity extends AppCompatActivity {
                             intent.putExtra("nickname",Nickname);
                             intent.putExtra("gender",Gender);
                             intent.putExtra("id",ID);
-                            startActivity(intent);startActivity(intent);
+                            startActivity(intent);
                             Handler handler = new Handler(Looper.getMainLooper());
                             handler.postDelayed(new Runnable() {
                                 @Override
