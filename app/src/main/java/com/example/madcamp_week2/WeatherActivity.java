@@ -234,6 +234,25 @@ public class WeatherActivity extends AppCompatActivity {
                             }
                             adapter.addItem(new Fashion(Top, Top_color, Bottom, Bottom_color, Accessory, Accessory_color, Outer, Outer_color));
                             adapter.notifyDataSetChanged();
+                            adapter.setOnItemClickListener(new RecFashionAdapter.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(View v, int position) {
+                                    Intent intent = new Intent(getApplicationContext(), Detail_Activity.class);
+                                    if(!Bottom_color.equals("")){
+                                        intent.putExtra("Bottom",Bottom_color.concat(Bottom));
+                                    }
+                                    if(!Top_color.equals("")){
+                                        intent.putExtra("Top",Top_color.concat(Top));
+                                    }
+                                    if(!Accessory_color.equals("")){
+                                        intent.putExtra("Accessory",Accessory_color.concat(Accessory));
+                                    }
+                                    if(!Outer_color.equals("")){
+                                        intent.putExtra("Outer",Outer_color.concat(Outer));
+                                    }
+                                    startActivity(intent);
+                                }
+                            });
                         }
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
