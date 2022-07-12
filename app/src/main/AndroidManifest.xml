@@ -30,7 +30,7 @@
         </activity>
         <activity
             android:name=".main.SplashActivity"
-            android:exported="false"
+            android:exported="true"
             android:hardwareAccelerated="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
