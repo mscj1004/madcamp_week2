@@ -27,7 +27,9 @@
         android:fontFamily="@font/regular"
         />
     </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
     <CheckBox
         android:layout_marginLeft="30dp"
         android:id="@+id/style_cb"
@@ -38,7 +40,7 @@
         android:layout_marginBottom="-30dp"
         android:textColor="@color/bold_red"
         />
-
+    </LinearLayout>
     <LinearLayout
         android:id="@+id/top_m"
         android:layout_width="match_parent"
