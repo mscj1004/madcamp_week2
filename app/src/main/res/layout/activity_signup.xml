@@ -75,7 +75,7 @@
                 app:layout_constraintStart_toStartOf="parent"></TextView>
             <EditText
                 android:id="@+id/edit_id"
-                android:layout_width="330dp"
+                android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:fontFamily="@font/regular"
                 android:textSize="15dp"
@@ -118,7 +118,7 @@
             <EditText
                 android:inputType="textPassword"
                 android:id="@+id/edit_password"
-                android:layout_width="330dp"
+                android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:fontFamily="@font/regular"
                 android:textSize="15dp"
@@ -146,7 +146,7 @@
                 app:layout_constraintStart_toStartOf="parent"></TextView>
             <EditText
                 android:id="@+id/edit_nickname"
-                android:layout_width="330dp"
+                android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:fontFamily="@font/regular"
                 android:textSize="15dp"
