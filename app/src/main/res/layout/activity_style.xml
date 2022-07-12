@@ -56,7 +56,7 @@
             android:textColor="@color/splash_bg_red"/>
         <Spinner
             android:id="@+id/sp_top_type_m"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
@@ -64,7 +64,7 @@
             android:spinnerMode="dropdown" />
         <Spinner
             android:id="@+id/sp_top_color_m"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
@@ -88,7 +88,7 @@
             />
         <Spinner
             android:id="@+id/sp_top_type_w"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
@@ -96,7 +96,7 @@
             android:spinnerMode="dropdown" />
         <Spinner
             android:id="@+id/sp_top_color_w"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
@@ -120,14 +120,14 @@
             />
         <Spinner
             android:id="@+id/sp_bottom_type_m"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
             android:entries="@array/man_bottom" />
         <Spinner
             android:id="@+id/sp_bottom_color_m"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
@@ -149,14 +149,14 @@
             />
         <Spinner
             android:id="@+id/sp_bottom_type_w"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
             android:entries="@array/bottom_w" />
         <Spinner
             android:id="@+id/sp_bottom_color_w"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
@@ -178,14 +178,14 @@
             />
         <Spinner
             android:id="@+id/sp_accessory_type_m"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
             android:entries="@array/man_acc" />
         <Spinner
             android:id="@+id/sp_accessory_color_m"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
@@ -207,14 +207,14 @@
             />
         <Spinner
             android:id="@+id/sp_accessory_type_w"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
             android:entries="@array/accessory_w" />
         <Spinner
             android:id="@+id/sp_accessory_color_w"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
@@ -235,14 +235,14 @@
             />
         <Spinner
             android:id="@+id/sp_outer_type_m"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
             android:entries="@array/man_outer" />
         <Spinner
             android:id="@+id/sp_outer_color_m"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
@@ -264,14 +264,14 @@
             android:textColor="@color/splash_bg_red" />
         <Spinner
             android:id="@+id/sp_outer_type_w"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
             android:entries="@array/outer_w" />
         <Spinner
             android:id="@+id/sp_outer_color_w"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
