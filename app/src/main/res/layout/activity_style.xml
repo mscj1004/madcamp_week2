@@ -13,24 +13,29 @@
     >
     <TextView
         android:id="@+id/style_text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hong 님의 코디를 골라보세요"
-        android:textSize="28dp"
-
-        android:textColor="@color/splash_bg_red"
+        android:text="Hong 님의 코디를 골라보세요."
+        android:textSize="25dp"
+        android:textColor="@color/bold_red"
         android:fontFamily="@font/regular"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="32dp"
-        android:layout_gravity="center"/>
+        />
 </LinearLayout>
 
     <CheckBox
+        android:layout_marginLeft="30dp"
         android:id="@+id/style_cb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="공유"
+        android:text="다른사람과 코디 공유하기"
+        android:fontFamily="@font/regular"
+        android:layout_marginBottom="10dp"
         android:textColor="@color/splash_bg_red"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="48dp"
@@ -48,7 +53,7 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="30dp"
             android:text="상의/색깔"
             android:textColor="@color/splash_bg_red"/>
 
@@ -56,7 +61,6 @@
         <Spinner
             android:id="@+id/sp_top_type_m"
             android:layout_width="130dp"
-
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
@@ -127,7 +131,7 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="30dp"
             android:text="하의/색깔"
             android:textColor="@color/splash_bg_red"
 
@@ -196,7 +200,7 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="30dp"
             android:text="액세서리/색깔"
             android:textColor="@color/splash_bg_red"
             />
@@ -264,7 +268,7 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="30dp"
             android:text="겉옷/색깔"
             android:textColor="@color/splash_bg_red"
 
@@ -327,13 +331,12 @@
         android:id="@+id/add_btn"
         android:layout_width="80dp"
         android:layout_height="49dp"
+        android:layout_marginTop="-60dp"
         android:layout_gravity="center"
         android:backgroundTint="@color/bold_red"
         android:text="등록"
         android:textColor="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="609dp" />
+        />
 
 
 </LinearLayout>

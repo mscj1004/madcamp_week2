@@ -111,7 +111,7 @@
         app:layout_constraintTop_toBottomOf="@+id/top_text3"
         android:layout_marginLeft="30dp"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.1">
+        app:layout_constraintVertical_bias="0.15">
 
         <TextView
             android:layout_width="wrap_content"
@@ -142,7 +142,7 @@
         app:layout_constraintTop_toBottomOf="@+id/top_text4"
         android:layout_marginLeft="30dp"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.1">
+        app:layout_constraintVertical_bias="0.2">
 
         <TextView
             android:layout_width="wrap_content"

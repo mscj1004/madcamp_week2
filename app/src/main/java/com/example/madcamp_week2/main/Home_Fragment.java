@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.madcamp_week2.R;
+import com.example.madcamp_week2.share.Share;
+import com.example.madcamp_week2.share.SharedActivity;
 import com.example.madcamp_week2.style.StyleActivity;
 import com.example.madcamp_week2.weather.WeatherActivity;
 
@@ -61,7 +63,7 @@ public class Home_Fragment extends Fragment {
         go_Tab4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent3 = new Intent(getActivity(), WeatherActivity.class);
+                Intent intent3 = new Intent(getActivity(), SharedActivity.class);
                 startActivity(intent3);
             }
         });
