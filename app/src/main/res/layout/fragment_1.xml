@@ -86,7 +86,7 @@
         android:fontFamily="@font/regular"
         android:textSize="18dp"
         android:layout_marginTop="260dp"
-        android:text="새로운 내"
+        android:text="새로운"
         android:textColor="@color/bold_red"
         >
     </TextView>
@@ -100,7 +100,7 @@
         android:layout_marginLeft="80dp"
 
         android:layout_marginTop="300dp"
-        android:text="코디 저장하기"
+        android:text="내 코디 저장하기"
         >
     </TextView>
 
