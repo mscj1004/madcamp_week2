@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +8,8 @@
     tools:context=".style.StyleActivity"
     android:background="@drawable/tab3_bg"
     android:orientation="vertical">
-<LinearLayout
+
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     >
@@ -23,10 +25,8 @@
         android:textSize="25dp"
         android:textColor="@color/bold_red"
         android:fontFamily="@font/regular"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="32dp"
         />
-</LinearLayout>
+    </LinearLayout>
 
     <CheckBox
         android:layout_marginLeft="30dp"
@@ -35,29 +35,22 @@
         android:layout_height="wrap_content"
         android:text="다른사람과 코디 공유하기"
         android:fontFamily="@font/regular"
-        android:layout_marginBottom="10dp"
-        android:textColor="@color/splash_bg_red"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="51dp" />
+        android:layout_marginBottom="-30dp"
+        android:textColor="@color/bold_red"
+        />
 
     <LinearLayout
         android:id="@+id/top_m"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/login_bg"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="150dp">
-
+        android:layout_marginLeft="30dp"
+        >
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
             android:text="상의/색깔"
             android:textColor="@color/splash_bg_red"/>
-
-
         <Spinner
             android:id="@+id/sp_top_type_m"
             android:layout_width="130dp"
@@ -66,7 +59,6 @@
             android:backgroundTint="@color/black"
             android:entries="@array/man_top"
             android:spinnerMode="dropdown" />
-
         <Spinner
             android:id="@+id/sp_top_color_m"
             android:layout_width="130dp"
@@ -75,39 +67,29 @@
             android:backgroundTint="@color/black"
             android:entries="@array/color_arr"
             android:spinnerMode="dropdown" />
-
-
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/top_w"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/login_bg"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="100dp"
+        android:layout_marginLeft="30dp"
         android:visibility="invisible">
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:text="상의/색깔"
-            android:textColor="@color/splash_bg_red"/>
-
-
+            android:textColor="@color/splash_bg_red"
+            />
         <Spinner
             android:id="@+id/sp_top_type_w"
             android:layout_width="130dp"
-
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
             android:entries="@array/woman_top"
             android:spinnerMode="dropdown" />
-
         <Spinner
             android:id="@+id/sp_top_color_w"
             android:layout_width="130dp"
@@ -116,27 +98,21 @@
             android:backgroundTint="@color/black"
             android:entries="@array/color_arr"
             android:spinnerMode="dropdown" />
-
-
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bottom_m"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="180dp">
-
+        android:layout_marginLeft="30dp"
+        >
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
             android:text="하의/색깔"
             android:textColor="@color/splash_bg_red"
 
             />
-
         <Spinner
             android:id="@+id/sp_bottom_type_m"
             android:layout_width="130dp"
@@ -144,7 +120,6 @@
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
             android:entries="@array/man_bottom" />
-
         <Spinner
             android:id="@+id/sp_bottom_color_m"
             android:layout_width="130dp"
@@ -158,19 +133,14 @@
         android:id="@+id/bottom_w"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="180dp"
+        android:layout_marginLeft="30dp"
         android:visibility="invisible">
-
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:text="하의/색깔"
             android:textColor="@color/splash_bg_red"
             />
-
         <Spinner
             android:id="@+id/sp_bottom_type_w"
             android:layout_width="130dp"
@@ -178,7 +148,6 @@
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
             android:entries="@array/bottom_w" />
-
         <Spinner
             android:id="@+id/sp_bottom_color_w"
             android:layout_width="130dp"
@@ -192,19 +161,14 @@
         android:id="@+id/accessory_m"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="260dp"
+        android:layout_marginLeft="30dp"
         >
-
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
             android:text="액세서리/색깔"
             android:textColor="@color/splash_bg_red"
             />
-
         <Spinner
             android:id="@+id/sp_accessory_type_m"
             android:layout_width="130dp"
@@ -212,7 +176,6 @@
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
             android:entries="@array/man_acc" />
-
         <Spinner
             android:id="@+id/sp_accessory_color_m"
             android:layout_width="130dp"
@@ -225,21 +188,15 @@
     <LinearLayout
         android:id="@+id/accessory_w"
         android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="260dp"
         android:visibility="invisible">
-
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:text="액세서리/색깔"
             android:textColor="@color/splash_bg_red"
-
             />
-
         <Spinner
             android:id="@+id/sp_accessory_type_w"
             android:layout_width="130dp"
@@ -247,7 +204,6 @@
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
             android:entries="@array/accessory_w" />
-
         <Spinner
             android:id="@+id/sp_accessory_color_w"
             android:layout_width="130dp"
@@ -256,24 +212,18 @@
             android:backgroundTint="@color/black"
             android:entries="@array/color_arr" />
     </LinearLayout>
-
     <LinearLayout
         android:id="@+id/outer_m"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="340dp">
-
+        android:layout_marginLeft="30dp"
+        >
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
             android:text="겉옷/색깔"
             android:textColor="@color/splash_bg_red"
-
             />
-
         <Spinner
             android:id="@+id/sp_outer_type_m"
             android:layout_width="130dp"
@@ -281,7 +231,6 @@
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
             android:entries="@array/man_outer" />
-
         <Spinner
             android:id="@+id/sp_outer_color_m"
             android:layout_width="130dp"
@@ -295,19 +244,14 @@
         android:id="@+id/outer_w"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="340dp"
+        android:layout_marginLeft="30dp"
         android:visibility="invisible">
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:text="겉옷/색깔"
-            android:textColor="@color/splash_bg_red"
-            />
-
+            android:textColor="@color/splash_bg_red" />
         <Spinner
             android:id="@+id/sp_outer_type_w"
             android:layout_width="130dp"
@@ -315,7 +259,6 @@
             android:layout_marginLeft="10dp"
             android:backgroundTint="@color/black"
             android:entries="@array/outer_w" />
-
         <Spinner
             android:id="@+id/sp_outer_color_w"
             android:layout_width="130dp"

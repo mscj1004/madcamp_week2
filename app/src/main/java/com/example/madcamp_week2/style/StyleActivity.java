@@ -63,12 +63,6 @@ public class StyleActivity extends AppCompatActivity {
         LinearLayout acc_m = findViewById(R.id.accessory_m);
         LinearLayout outer_m =findViewById(R.id.outer_m);
 
-
-
-
-
-
-
         //gender 1
         LinearLayout top_w = findViewById(R.id.top_w);
         LinearLayout bottom_w = findViewById(R.id.bottom_w);
