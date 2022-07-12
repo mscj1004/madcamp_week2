@@ -109,21 +109,22 @@ public class SharedActivity extends AppCompatActivity {
                             outer_color = sharedArray.getJSONObject(i).getString("outer_color");
 
 
+                            share_list.add(new Share(nickname, top, top_color, bottom, bottom_color, accessory, accessory_color, outer, outer_color));
                             adapter.addItem(new Share(nickname, top, top_color, bottom, bottom_color, accessory, accessory_color, outer, outer_color));
                             adapter.notifyDataSetChanged();
                             adapter.setOnItemClickListener(new ShareAdapter.OnItemClickListener() {
                                 @Override
                                 public void onItemClick(View v, int position) {
                                     Intent intent = new Intent(getApplicationContext(), SharedDetailActivity.class);
-                                    intent.putExtra("nickname",nickname);
-                                    intent.putExtra("top", top);
-                                    intent.putExtra("top_color",top_color);
-                                    intent.putExtra("bottom", bottom);
-                                    intent.putExtra("bottom_color",bottom_color);
-                                    intent.putExtra("accessory",accessory);
-                                    intent.putExtra("accessory_color",accessory_color);
-                                    intent.putExtra("outer",outer);
-                                    intent.putExtra("outer_color",outer_color);
+                                    intent.putExtra("nickname",share_list.get(position).getNickname());
+                                    intent.putExtra("top", share_list.get(position).getTop());
+                                    intent.putExtra("top_color",share_list.get(position).getTop_color());
+                                    intent.putExtra("bottom", share_list.get(position).getBottom());
+                                    intent.putExtra("bottom_color",share_list.get(position).getBottom_color());
+                                    intent.putExtra("accessory",share_list.get(position).getAccessory());
+                                    intent.putExtra("accessory_color",share_list.get(position).getAccessory_color());
+                                    intent.putExtra("outer",share_list.get(position).getOuter());
+                                    intent.putExtra("outer_color",share_list.get(position).getOuter_color());
                                     startActivity(intent);
                                 }
                             });
