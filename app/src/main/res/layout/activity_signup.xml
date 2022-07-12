@@ -75,7 +75,7 @@
                 app:layout_constraintStart_toStartOf="parent"></TextView>
             <EditText
                 android:id="@+id/edit_id"
-                android:layout_width="350dp"
+                android:layout_width="330dp"
                 android:layout_height="50dp"
                 android:fontFamily="@font/regular"
                 android:textSize="15dp"
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginTop="-10dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="50dp"
                 android:text="아이디 중복체크"
                 android:background="@null"
                 android:textColor="@color/bold_red"
@@ -118,7 +118,7 @@
             <EditText
                 android:inputType="textPassword"
                 android:id="@+id/edit_password"
-                android:layout_width="350dp"
+                android:layout_width="330dp"
                 android:layout_height="50dp"
                 android:fontFamily="@font/regular"
                 android:textSize="15dp"
@@ -146,7 +146,7 @@
                 app:layout_constraintStart_toStartOf="parent"></TextView>
             <EditText
                 android:id="@+id/edit_nickname"
-                android:layout_width="350dp"
+                android:layout_width="330dp"
                 android:layout_height="50dp"
                 android:fontFamily="@font/regular"
                 android:textSize="15dp"

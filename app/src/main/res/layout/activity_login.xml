@@ -133,6 +133,7 @@
             app:layout_constraintVertical_bias="0.2"></TextView>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:fontFamily="@font/regular"
             android:id="@+id/sign_up_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
